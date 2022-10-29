@@ -11,14 +11,14 @@ btn.addEventListener('click',function(){
     }else {
         giaiptbac2(a,b,c)
     }
-    function giaiptbac2(a,b,c) {   
+    function giaiptbac2(a,b,c) {
         function giaiptbacnhat(b, c){
             const x = -b/c;
             return {
                 // title:'Phương trình có 1 nghiệm',
                 x:x,
             }
-        } 
+        }
         if (a == 0) return {
             title:'Phương trình bậc 1',
             x: giaiptbacnhat(b, c),
@@ -32,7 +32,7 @@ btn.addEventListener('click',function(){
             return {
                 title: 'Phương trình có 2 nghiệm',
                 x1: x1,
-                x2: x2, 
+                x2: x2,
             };
         } else if (delta === 0) {
                 const x =-b/2*a;
@@ -42,7 +42,7 @@ btn.addEventListener('click',function(){
                 }
         } else {
             return {
-                title: 'Phương trình vô nghiệm' 
+                title: 'Phương trình vô nghiệm'
             }
         }
     }

@@ -1,0 +1,2 @@
+- Format code gọn, đẹp.
+- Chia lại function.
