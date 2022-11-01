@@ -37,8 +37,13 @@ buttonEl.addEventListener('click', function() {
         numberBValue = +numberBValue;
         numberCValue = +numberCValue;
         const result = giaiptbac2(numberAValue, numberBValue, numberCValue);
+<<<<<<< HEAD
         // console.log(result);
         showAlert('success','Tính toán kết quả thành công');
+=======
+        console.log(result);
+        showAlert('success', 'Tính toán kết quả thành công');
+>>>>>>> 0f0c31011f9c2b330ffe97e9982b19e87a4e8f23
     }
 });
 String.prototype.toCapitalize = function(string) {
@@ -53,14 +58,15 @@ function showAlert(type, message) {
 }
 
 function giaiptbacnhat(b, c) {
-    /**
-     * b1: thế giá trị mình nhập vào biểu thức -> xem có vấn đề gì không
-     * b = 0, c = 0;
-     * x = -0/0;
-     */
-    const x = -b/c;
-    return {
-        x:x,
+    if (c != 0) {
+        const x = -c/b;
+        return {
+            x:x,
+        }
+    } else {
+        return{
+            title: 'Phương trình vô nghiệm',
+        }
     }
 }
 
@@ -85,7 +91,7 @@ function giaiptbac2(a, b, c) {
         const x =-b/2*a;
         return {
             title :'Phương trình có nghiệm kép',
-            x: x,
+            x:x,
         }
     } else {
         return {
