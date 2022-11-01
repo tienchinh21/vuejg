@@ -18,7 +18,7 @@ btn.addEventListener('click', function() {
         numberCValue = +(numberCValue);
         const result = giaiptbac2(numberAValue, numberBValue, numberCValue);
         console.log(result);  
-        showAlert('success','Tính toán kết quả thành công');     
+        showAlert('success', 'Tính toán kết quả thành công');     
     }
 });
 String.prototype.toCapitalize = function(string) {
@@ -32,9 +32,15 @@ function showAlert(type, message) {
     alert(newAlert);
 }
 function giaiptbacnhat(b, c) {
-    const x = -b/c;
-    return {
-    x:x,
+    if (c != 0) {
+        const x = -c/b;
+        return {
+            x:x,
+        }
+    } else {
+        return{
+            title: 'Phương trình vô nghiệm', 
+        }
     }
 } 
 function giaiptbac2(a, b, c) {   
@@ -58,7 +64,7 @@ function giaiptbac2(a, b, c) {
         const x =-b/2*a;
         return {
             title :'Phương trình có nghiệm kép',
-            x: x,
+            x:x,
         }
     } else {
         return {
