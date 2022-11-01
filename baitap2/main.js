@@ -37,13 +37,8 @@ buttonEl.addEventListener('click', function() {
         numberBValue = +numberBValue;
         numberCValue = +numberCValue;
         const result = giaiptbac2(numberAValue, numberBValue, numberCValue);
-<<<<<<< HEAD
-        // console.log(result);
-        showAlert('success','Tính toán kết quả thành công');
-=======
         console.log(result);
         showAlert('success', 'Tính toán kết quả thành công');
->>>>>>> 0f0c31011f9c2b330ffe97e9982b19e87a4e8f23
     }
 });
 String.prototype.toCapitalize = function(string) {
