@@ -53,9 +53,10 @@ function showAlert(type, message) {
 }
 
 function giaiptbacnhat(b, c) {
-    if (c != 0) {
+    if (b != 0) {
         const x = -c/b;
         return {
+            title:'Phương trình có 1 nghiệm',
             x:x,
         }
     } else {
@@ -67,10 +68,7 @@ function giaiptbacnhat(b, c) {
 
 function giaiptbac2(a, b, c) {
     if (a === 0) {
-        return {
-            title:'Phương trình bậc 1',
-            x: giaiptbacnhat(b, c),
-        }
+        return giaiptbacnhat(b, c);
     }
     const delta = b*b-4*a*c;
 
